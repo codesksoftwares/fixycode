@@ -18,7 +18,7 @@
 
 
 function get_openAi_description($title,$no_of_words){
-		$title = $this->remove_special_characters($title);
+		$title = removeUtf8AndSpecialChars($title);
 		$curl = curl_init();
 
 		curl_setopt_array($curl, array(
